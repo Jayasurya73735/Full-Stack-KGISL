@@ -1,0 +1,88 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;  
+}
+li{
+    list-style: none;
+}
+nav{
+    background-color: #131314;
+    color: wheat !important;
+}
+.brandName,.loginUserName{
+    color: wheat !important;
+}
+
+.mainContainer{
+    display: flex;
+    flex: 1;
+}
+
+.sideBar{
+    width: 250px;
+    background-color: #d2d2d6;    
+}
+.sideBar ul{
+    padding-left: 0px;
+    padding: 20px 4px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.sideBar li{
+    padding: 8px 0;
+}
+.sideBar li:hover{
+    background-color: #131314;
+}
+.sideBar li a{
+    text-decoration: none;
+    margin-left: 30px;
+}
+.sideBar li a i{
+    margin-right: 10px;
+}
+.sideBar li:hover .sideBar li a{
+    color: black;
+}
+.mainContentBox{
+    height: 90vh;
+    overflow-y: auto;
+}
+.carouselBox{
+    width: 100% !important;
+    padding: 10px 20px;
+    height: 300px;
+  }
+  .carousel{
+    height: 100%;
+
+  }
+  img{
+    width: 100%;
+    height: 300px;
+  }
+  .carousel-item{
+    position: relative !important;
+  }
+  .carousel-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(to right top,rgba(0, 0, 0, 0.83),rgba(0, 0, 0, 0.53),rgba(0, 0, 0, 0.33));
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    color: white;
+    
+  }
+  .carousel-content .movie-heading{
+    color: var(--logo-color);
+  }

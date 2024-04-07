@@ -1,0 +1,240 @@
+    
+:root{
+  --primary-color:blueviolet;
+  --secondary-color:rgb(25, 28, 123);
+  --logo-color:rgb(237, 128, 4)
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+  .nav{
+      background-color:#131314;
+  }
+
+  .navbar-brand{
+    color: var(--logo-color);
+    font-weight: 700;
+    font-size: 22px;
+  }
+  .mainContainer-left{
+    width: 250px;
+    background-color: #131314;
+    
+  }
+  .main-container{
+    margin-top: 2px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex: 1;
+    overflow: auto;
+  }
+  .mainLeft-menu{
+    width: 250px;      
+  }
+  .sideMenu{
+    width: 100%;
+    list-style: none;
+    padding: 0px 5px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+
+  }
+  .sideMenu li{          
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  .sideMenu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .sideMenu li:hover{
+    background-color: blue;
+  }
+  .mainContainer-right{
+    width: calc(100% - 250px);
+    height: 90vh;
+    overflow-y: auto;
+  }
+  .carouselBox{
+    width: 100%;
+    padding: 10px 20px;
+    height: 300px;
+  }
+  .carousel{
+    height: 100%;
+
+  }
+  img{
+    width: 100%;
+    height: 300px;
+  }
+  .carousel-item{
+    position: relative;
+  }
+  .carousel-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(to right top,rgba(0, 0, 0, 0.83),rgba(0, 0, 0, 0.53),rgba(0, 0, 0, 0.33));
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    color: white;
+    
+  }
+  .carousel-content .movie-heading{
+    color: var(--logo-color);
+  }
+  .topMovieBox{
+    padding: 10px 50px;
+  }
+  .topMovieBox>h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .movieContentBox{          
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    
+  }
+  .movieBox{
+    width: 180px;
+    height: max-content;
+    box-shadow: 0 0 2px 1px rgb(186, 185, 185);
+    padding: 2px;
+    flex-shrink: 0;
+  }
+  .movieImg{
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  .movieImg>img{
+    height: 100%;
+    width: 100%;
+  }
+  .movieDetail{
+    padding:5px;
+  }
+  .movieName{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .arrow{
+    position: absolute;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: black;
+    z-index: 4;
+  }
+  .arrow i{
+    font-size: 28px;
+    color: white;
+  }
+  .arrow:nth-child(1){
+    left: 0;
+    top: 50%;
+    transform: translate(0%,-50%);
+  }
+  .arrow:nth-child(2){
+    right: 0;
+    top: 50%;
+    transform: translate(0%,-50%);
+  }
+  .bi-star-fill{
+    color: yellow;
+    font-size: 16px;
+  }
+  .bi-star{
+    font-size: 16px;
+    margin-left: 5px;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  .bi-star:hover{
+    background: gray;
+
+  }
+  .movieRateValue{
+    color: black;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  .singleMovieDetails{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #131314;
+    padding: 30px;
+    color: white;
+    position: relative;
+  }
+  .movieImageName{
+    display: flex;
+  }
+  .movieImageName .imageBox{
+    width: 40%;
+    height: 350px;
+  }
+  .movieImageName .singleMovieNameBox{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    row-gap: 10px;
+  }
+  .movieImageName .imageBox img{
+    width: 100%;
+    height: 100%;
+  }
+  .movieImageName .singleMovieNameBox .singleMovieName{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .singleMovieRateValue{
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
+  }
+  .singleMovieReleaseDetails{
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  .singleMovieReleaseDetails span{
+    font-size: 18px;
+  }
+  .singleMovieDesc{
+    margin-top: 20px;
+  }
+  .singleMovieDesc p{
+    color: rgb(194, 191, 191);
+  }
+  .cancelbtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 3px 5px;
+  }
+  .cancelbtn:hover{
+    background-color: #555557;
+  }
