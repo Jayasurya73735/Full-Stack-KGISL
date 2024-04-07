@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addsong</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="poppins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .main-container{
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url('https://images.pexels.com/photos/356006/pexels-photo-356006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            min-height: 100vh;
+            background-size: cover;
+        }
+        .nav-item:hover .nav-link{
+          color: rgb(214, 58, 58);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg px-5" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#">Music Player</a>
+              <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">My Playlist</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" >Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="container d-flex justify-content-center align-items h-100 " style="margin-top: 70px;">
+                <div class="bg-white p-4 col-lg-5" style="opacity: 0.88;">
+                    <h3 class="text-center py-3">Add Your Song</h3>
+                    <div class="error" id="error"></div>
+                    <form class="row g-3 ">
+
+                        <div class="col-md-12">
+                          <label for="songname" class="form-label">Song Name</label>
+                          <input type="text" class="form-control" id="songname">
+                        </div>
+                        <div class="col-md-12">
+                          <label for="artist" class="form-label">Artist Name</label>
+                          <input type="text" class="form-control" id="artist">
+                        </div>
+                        <div class="col-12">
+                          <label for="songpath" class="form-label">Song Path</label>
+                          <input type="file" class="form-control" id="songpath">
+                        </div>                       
+                        
+                        <div class="col-12 text-center">
+                          <button type="submit" id="songadd" class="btn btn-primary w-100">Add</button>
+                        </div>
+                      </form>                </div>
+          </div>
+          
+    </div>
+    <script>
+        let songname = document.getElementById('songname');
+        let artist = document.getElementById('artist');
+        let songpath = document.getElementById('songpath');
+        let addsong = document.getElementById('songadd');
+        let errorMsg = document.getElementById('error');
+
+        addsong.addEventListener('click',(e)=>{
+          //console.log((songpath.value).split("\\").slice(-1)[0]);
+
+            e.preventDefault();
+            if(songname.value != '' && artist.value != '' && songpath != '')
+            {
+                let newSongData =  {
+                "song": songname.value,
+                "artist": artist.value,
+                "path": `music/${(songpath.value).split("\\").slice(-1)[0]}`
+                }
+
+                let existSongData = localStorage.getItem('SongDetails') ? JSON.parse(localStorage.getItem('SongDetails')) : [];
+                existSongData.push(newSongData);
+                localStorage.setItem('SongDetails',JSON.stringify(existSongData));
+                window.location.href = 'myplaylist.html'
+            }
+            else{
+              errorMsg.innerHTML='<p class="text-danger p-2 bg-danger-subtle">Fill all fields</p>'
+            }
+            
+        })
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

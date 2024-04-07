@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="poppins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .main-container{
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url('https://images.pexels.com/photos/356006/pexels-photo-356006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            min-height: 100vh;
+            background-size: cover;
+        }
+        .nav-item:hover .nav-link{
+          color: rgb(214, 58, 58);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg px-5" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8));">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#">Music Player</a>
+              <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home.html" id="home-nav">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="myplaylist.html" id="myplaylist-nav">My Playlist</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="about.html" id="about-nav">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html" id="contact-nav">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" id="login-nav">Login</a>
+                      </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+         <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-5 d-flex justify-content-center align-items-center order-2 " >
+                  <div class="p-1 bg-white">
+                    <img src="https://bestanimations.com/media/acoustic/1135761905acoustic-guitar-animated-gif-8.gif" alt="" width="100%" height="400px">
+                  </div>
+                </div>
+                <div class="col-lg-7 d-flex justify-content-start align-items-center order-1" style="height: 90vh;">
+                    <div>
+                        <h1 class="text-warning">About</h1>
+                        <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quibusdam quo distinctio! Corporis consequuntur sed, cupiditate ducimus assumenda dolorem, quam facilis delectus vel, nam praesentium tempore dolor fugiat deleniti excepturi?</p>
+                    </div>
+                </div>
+            </div>
+         </div>
+          
+    </div>
+    <script src="islogin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

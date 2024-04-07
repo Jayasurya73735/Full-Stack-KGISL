@@ -1,0 +1,40 @@
+[
+    
+    {
+        "songname":"Adi-Penne Song",
+        "type":"album",
+        "artist":"Stephen",
+        "path":"Adi-Penne-MassTamilan.fm.mp3"
+    },
+    {
+        "songname":"IMagine_Dragons",
+        "type":"western",
+        "artist":"Alan Walker",
+        "path":"Imagine-Dragons-Believer.mp3"
+    },
+    {
+        "songname":"Maane-Maane Song",
+        "type":"romantic",
+        "artist":"Unnikrishnan",
+        "path":"Maane-Maane.mp3"
+    },
+    {
+        "songname":"Thozhiya-En-Kathiliya",
+        "type":"romantic",
+        "artist":"AR Rahuman",
+        "path":"Thozhiya-En-Kadhaliya.mp3"
+    },
+    {
+        "songname":"Unakaga-Varuven Song",
+        "type":"album",
+        "artist":"Vijay Antony",
+        "path":"Unakkaga-Varuven.mp3"
+    },
+    {
+        "songname":"Unstoppable Song",
+        "type":"western",
+        "artist":"Alan Walker",
+        "path":"Unstoppable_128-(PagalWorld).mp3"
+    }
+    
+]

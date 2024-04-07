@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="poppins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .main-container{
+            /* background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url('https://images.pexels.com/photos/356006/pexels-photo-356006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+            background-color: #130f40;
+            min-height: 100vh;
+            background-size: cover;
+        }
+        .music-image{
+            background-image: url('https://images.pexels.com/photos/164853/pexels-photo-164853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            height: 300px;
+            background-size: cover;
+            padding: 3px;
+        }
+        .control-btns{
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-color: rgb(52, 52, 189);
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+        .play-btn {
+            font-size: 28px;
+            width: 40px;
+            height: 40px;
+        }
+        .home-vlog{
+          background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('https://th.bing.com/th/id/OIP.bBw17fQKXXam1sPnxqz6dQHaDw?rs=1&pid=ImgDetMain');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+        .popular-song .card{
+          height: 200px;
+          overflow: hidden;
+        }
+        .popular-song .card:hover img{
+          transform: scale(1.2);
+        }
+        .popular-song .card:hover p{
+          color: red;
+        }
+        .artist-box .card{
+          width: 150px;
+          height: 150px;
+          border-radius: 100%;
+          overflow: hidden;
+          margin-right: 15px;
+        }
+        .artist-box img{
+          width: 150px;
+          height: 150px;
+          border-radius: 100%;
+        }
+        .nav-item:hover .nav-link{
+          color: rgb(214, 58, 58);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg px-5 py-3">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#">Music Player</a>
+              <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgb(202, 198, 198);">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#" id="home-nav">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="myplaylist.html" id="myplaylist-nav">My Playlist</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html" id="about-nav">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="contact-nav">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="login-nav">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+         <div class="container-md">
+              <div class="row text-dark home-vlog " style="border-radius: 10px;background-color: rgb(224, 215, 215);">
+                <div class="col-lg-6 p-4 text-white">
+                  <h2>WEB MUSIC</h2>
+                  <h2 class="text-warning">PLAYER</h2>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat temporibus aspernatur molestias corporis libero provident! Omnis ipsum cupiditate modi consectetur sapiente, deleniti dolor veniam alias, dolores ad, amet ut nisi.</p>
+                  <button class="btn btn-outline-warning text-white">Read More</button>
+                </div>
+              </div>
+              <div class="pt-4 pb-0 mb-0">
+                <h5 class="text-white mb-3">Popular Songs</h5>
+                <div style="height: 240px;" class="d-flex justify-content-around popular-song flex-wrap">
+                    <div class="card col-2  pt-1 px-1" style="height: 200px;" onclick='sendSongurl("music/Adi-Penne-MassTamilan.fm.mp3")'>
+                        <div style="height: 150px; overflow: hidden;">
+                            <img src="https://careersplay.com/wp-content/uploads/2022/05/profile-cute-music-dp-for-whatsapp.jpg" class="w-100 h-100" alt="">
+                        </div>
+                        <div class="text-center pt-2">
+                            <p>Aritst : aniruth</p>
+                        </div>
+                    </div>
+                    <div class="card col-2 pt-1 px-1">
+                      <div style="height: 150px;overflow: hidden;">
+                          <img src="https://www.shutterstock.com/shutterstock/photos/2165603207/display_1500/stock-vector-happy-world-music-day-and-musical-instruments-with-blue-background-vector-illustration-design-2165603207.jpg" class="w-100 h-100" alt="">
+                      </div>
+                      <div class="text-center pt-2">
+                          <p>Aritst : aniruth</p>
+                      </div>
+                  </div>
+                  <div class="card col-2 pt-1 px-1">
+                      <div style="height: 150px;overflow: hidden;">
+                          <img src="https://i.pinimg.com/236x/33/16/f7/3316f74c347191042da506d2be22c4c9.jpg" class="w-100 h-100" alt="">
+                      </div>
+                      <div class="text-center pt-2">
+                          <p>Aritst : aniruth</p>
+                      </div>
+                  </div>
+                  <div class="card col-2 pt-1 px-1">
+                    <div style="height: 150px;overflow: hidden;">
+                        <img src="https://careersplay.com/wp-content/uploads/2022/05/profile-cute-music-dp-for-whatsapp.jpg" class="w-100 h-100" alt="">
+                    </div>
+                    <div class="text-center pt-2">
+                        <p>Aritst : aniruth</p>
+                    </div>
+                </div>
+                <div class="card col-2 pt-1 px-1">
+                      <div style="height: 150px;overflow: hidden;">
+                          <img src="https://cdn3.vectorstock.com/i/1000x1000/27/57/luxury-music-logo-design-golden-shiny-musical-vector-20332757.jpg" class="w-100 h-100" alt="">
+                      </div>
+                      <div class="text-center pt-2">
+                          <p>Aritst : aniruth</p>
+                      </div>
+                </div>
+                </div>
+              </div>
+              <div class="">
+                <h5 class="text-white mb-3">Artist</h5>
+                <div style="height: 300px;" class="d-flex artist-box overflow-hidden ">
+                    <div class="card col-2 p-1" >
+                        <div style="height: 150px;">
+                            <img src="https://tamil.samayam.com/thumb/103692408/103692408.jpg?imgsize=126748&width=380&height=285&resizemode=75" class="w-100 h-100" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="card col-2 p-1">
+                      <div style="height: 150px;">
+                          <img src="https://i.scdn.co/image/ab6761610000e5ebbf753c009fd9c2d53351dd3c" class="w-100 h-100" alt="">
+                      </div>
+                  </div>
+                  <div class="card col-2 p-1">
+                      <div style="height: 150px;">
+                          <img src="https://i.pinimg.com/236x/33/16/f7/3316f74c347191042da506d2be22c4c9.jpg" class="w-100 h-100" alt="">
+                      </div>
+                     
+                  </div>
+                  <div class="card col-2 p-1">
+                    <div style="height: 150px;">
+                        <img src="https://careersplay.com/wp-content/uploads/2022/05/profile-cute-music-dp-for-whatsapp.jpg" class="w-100 h-100" alt="">
+                    </div>
+                </div>
+                <div class="card col-2 p-1">
+                  <div style="height: 150px;">
+                      <img src="https://thumbs.dreamstime.com/b/music-notes-7544001.jpg" class="w-100 h-100" alt="">
+                  </div>
+                </div>
+                <div class="card col-2 p-1">
+                  <div style="height: 150px;">
+                      <img src="https://thumbs.dreamstime.com/b/music-notes-7544001.jpg" class="w-100 h-100" alt="">
+                  </div>
+                </div>
+                <div class="card col-2 p-1">
+                  <div style="height: 150px;">
+                      <img src="https://thumbs.dreamstime.com/b/music-notes-7544001.jpg" class="w-100 h-100" alt="">
+                  </div>
+                </div>
+              </div>
+              
+              
+         </div>
+        
+         
+    </div>
+    <div class="container-fluid bg-dark py-3">
+      <p class="text-white">Copy rights : Rajkumar C</p>
+      <a href="contact.html?name='https://i.stack.imgur.com/De3e4.gif'">contact</a>
+    </div>
+
+    <script>
+      function sendSongurl(params) {
+        let url = `playpage.html?songname='${params}'`
+        window.location.href = url
+        
+      }
+    </script>
+    <script src="islogin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
