@@ -1,0 +1,122 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            padding: 30px;
+        }
+        .resumeForm{
+            margin-top: 20px;
+            display: none;
+            background-color: white;
+        }
+        p{
+            height: max-content;
+            width: 75%;
+            overflow-wrap: break-word;
+            padding: 0px;
+            margin: 0;
+        }
+        .userDetails{
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+  <body>
+    <div class="container d-flex justify-content-evenly g-3 align-items-center" style="height: 93vh;">
+
+        <form action="" class="col-4 bg-warning p-4">
+            <h3 class="text-center">RESUME BUILDER</h3>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" >
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="number" class="form-control" id="phone" >
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Gamil</label>
+                <input type="email" class="form-control" id="email" >
+              </div>
+              <div class="mb-3">
+                <label for="linkedin" class="form-label">LinkedIn Profile</label>
+                <input type="text" class="form-control" id="linkedin" >
+              </div>
+              <div class="mb-3">
+                <label for="github" class="form-label">GitHub Profile</label>
+                <input type="text" class="form-control" id="github" >
+              </div>
+              <input type="button" class="bg-success btn w-100" value="Create Resume" id="createResume">
+        </form>
+        <div class="resumeForm  shadow py-5 px-3" style="width: 700px;">
+            <h3 class="text-center">Resume</h3>
+            <div class="userDetails d-flex flex-column">
+               </div>
+            <div class="educationDetails mt-3 ">
+                <span class="fw-bold d-block mb-2">EDUCATIONAL QUALIFICATION</span>
+                <table border="1" class="text-center table table-bordered border-dark">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>College</th>
+                            <th>Passout Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BE-CSE</td>
+                            <td>Jayam College of Engg & Tech</td>
+                            <td>2021</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="skills">
+                <span class="fw-bold d-block mb-2">SKILLS</span>
+                <ol>
+                    <li>Logical Thinker</li>
+                    <li>Adaptability</li>
+                    <li>Creative Thinker</li>
+                    <li>Calm Person</li>
+                </ol>
+            </div>
+            <div class="certification">
+                <span class="fw-bold d-block mb-2">CERTIFICATION</span>
+                <ol>
+                    <li>FrontEnd Certificate</li>
+                    <li>FullStack Development Certificate</li>
+                </ol>
+            </div>
+        </div>
+       
+    </div>
+    <script>
+        let uname = document.getElementById('name')
+        let phone = document.getElementById('phone')
+        let email = document.getElementById('email')
+        let linkedin = document.getElementById('linkedin')
+        let github = document.getElementById('github')
+
+        document.getElementById('createResume').addEventListener('click',()=>{
+          
+            document.querySelector('.userDetails').innerHTML=`
+                <span class="uname">Name : ${uname.value}</span>
+                <span class="phone">Mobile : ${phone.value}</span>
+                <span class="email">Email : ${email.value}</span>
+                <p>LinkedIn : ${linkedin.value}</p>
+                <p>GitHub : ${github.value}</p>
+            `
+            document.querySelector('.resumeForm').style.display='block'
+        })
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
